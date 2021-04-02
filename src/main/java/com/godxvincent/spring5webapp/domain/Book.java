@@ -13,9 +13,13 @@ public class Book {
     private Long id;
     private String title;
     private String isbn;
-    @ManyToMany()
+    @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
+
+    // Cuando se tiene una relación entre entidades es necesario especificar si debe forzar la verificación de la entidad de forma estricta o de forma "perezosa"
+    @ManyToOne
+    private Publisher publisher;
 
     public Book() {
     }
@@ -55,6 +59,14 @@ public class Book {
 
     public void setAuthors(Set<Author> authors) {
         this.authors = authors;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     @Override
