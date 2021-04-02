@@ -2,11 +2,13 @@ plugins {
 	id 'org.springframework.boot' version '2.4.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+//	id 'application'
 }
 
 group = 'com.godxvincent'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+targetCompatibility = '11'
 
 repositories {
 	mavenCentral()
@@ -22,3 +24,8 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+//Si quiero tratar el proyecto como una aplicación debo correr el comando gradle run y agragar el pluggin application y definir la clase principal.
+//application {
+//	mainClass = 'com.godxvincent.spring5webapp.Spring5webappApplication'
+//}
