@@ -6,7 +6,6 @@ import com.godxvincent.spring5webapp.domain.Publisher;
 import com.godxvincent.spring5webapp.repositories.AuthorRepository;
 import com.godxvincent.spring5webapp.repositories.BookRepository;
 import com.godxvincent.spring5webapp.repositories.PublisherRepository;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
